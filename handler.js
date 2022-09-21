@@ -656,7 +656,7 @@ module.exports = {
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     mediaUrl: linkyt,
-    mediaType: 2,
+    mediaType: 'FOTO',
     description: deslink , 
     title: titlink,
     body: wm,
@@ -753,7 +753,7 @@ global.dfail = async (type, m, conn) => {
   mentions: conn.parseMention(msg),
   contextInfo: { externalAdReply :{
     mediaUrl: ig,
-    mediaType: 2,
+    mediaType: 'FOTO',
     description: desl, 
     title: titl,
     body: wmo,
