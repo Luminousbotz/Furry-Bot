@@ -17,7 +17,7 @@ let levelling = require('../lib/levelling')
 ╰─────────────⬣
 %readmore`.trim(),
   header: '╭─㉿ 〔 ⚚ %category ⚚ 〕 ㉿─\n┃',
-  body: '┃ク %cmd %islimit %isPremium',
+  body: '┃々 %cmd %islimit %isPremium',
   footer: '┃\n╰────────㉿\n', 
   after: `
 ⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❙❘❙❙❘❙❘❙❚❙❘❙❙❙❘❙❘❙❚❙❘❙❚❙❘❙❙❘❙❚❙❘ ⌕.
@@ -240,7 +240,12 @@ ${'```%npmdesc```'}
     const ojam = Math.floor( Kurang % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
     const onet = Math.floor( Kurang % (1000 * 60 * 60) / (1000 * 60))
     const detek = Math.floor( Kurang % (1000 * 60) / 1000)
-     let fkon = { key: { fromMe: false, participant: '0@s.whatsapp.net', ...(m.chat ? { remoteJid: 'status@broadcast' } : {}) }, message: { contactMessage: { displayName: '𝗧 𝗜 𝗠 𝗘 : ' + wktuwib, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}} 
+     let fkon = { key:
+	 { fromMe: false,
+	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
+	 { remoteJid: "62895627514070-6289636443917@g.us" } : {}) },
+	 message: { contactMessage: { displayName: `${pickRandom(['Luminous-MD', 'ᴄʀᴇᴀᴛᴇ ʙʏ ʀᴀʏʜɴ', 'Simple Bot Whatsapp'])}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:Zivfurr\nitem1.TEL;waid=62895627514070:62895627514070\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+	}
      let ftoko = { 
      key: { 
      fromMe: false, 
@@ -421,10 +426,10 @@ await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + te
       } 
      })*/
      //conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m).catch(_ => conn.reply(m.chat, text.trim(), m))
-  conn.sendFile(m.chat, 'https://a.uguu.se/jvdOuNWe.mp3', 'haori.mp3', null, m, true, {
+  conn.sendFile(m.chat, bzz, 'haori.mp3', null, fkon, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Luminous`, body: `${pickRandom(['Bot Wangsaff'])}`, sourceUrl: 'https://wa.me/62895627514070', thumbnail: await (await fetch('https://telegra.ph/file/2faa36c222a51b5acb9d7.jpg')).buffer(),}} 
-     })
+ptt: true, contextInfo:{ externalAdReply: {title: 'Stay Grateful With Your Life', body: `${pickRandom(['Simple Bot WhatsApp', 'ᴄʀᴇᴀᴛᴇ ʙʏ ʀᴀʏʜɴ'])}`, sourceUrl: 'https://wa.md/62895627514070', thumbnail: await (await fetch('https://telegra.ph/file/63c668962b7abcc95b394.jpg')).buffer(),}} 
+     }) 
 } catch (e) { 
      conn.reply(m.chat, 'Maaf, menu sedang error', m) 
      throw e 
