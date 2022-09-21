@@ -5,13 +5,19 @@ let levelling = require('../lib/levelling')
  let moment = require('moment-timezone') 
  let jimp = require('jimp') 
  let PhoneNumber = require('awesome-phonenumber') 
-
- let emot = `${pickRandom(['⎔', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '▢', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
-
  const defaultMenu = { 
-   before: `%readmore`.trim(),
-  header: '╭─㉿ 〔 %category 〕 ㉿─\n┃',
-  body: '┃${emot} %cmd %islimit %isPremium',
+   before: `
+╭──〔  sᴀᴋᴜʀᴀ ʙᴏᴛ  〕─⬣
+┃➵͜͡々 ᴜsᴇʀ : *%name*
+┃➵͜͡々 ʀᴇᴍᴀɪɴɪɴɢ ʟɪᴍɪᴛ : *%limit* ʟɪᴍɪᴛ
+┃➵͜͡々 ʀᴏʟᴇ : *%role*
+┃➵͜͡々 ʟᴇᴠᴇʟ : *%level (%exp / %maxexp)* 
+┃➵͜͡々 ᴛᴏᴛᴀʟ xᴘ : *%totalexp* xᴘ
+┃➵͜͡々 ᴅᴀᴛᴀʙᴀsᴇ : *%totalreg* ᴜsᴇʀ
+╰─────────────⬣
+%readmore`.trim(),
+  header: '╭─㉿ 〔 ⚚ %category ⚚ 〕 ㉿─\n┃',
+  body: '┃ク %cmd %islimit %isPremium',
   footer: '┃\n╰────────㉿\n', 
   after: `
 ⌕ ❙❘❙❙❘❙❚❙❘❙❙❚❙❙❘❙❙❘❙❘❙❚❙❘❙❙❙❘❙❘❙❚❙❘❙❚❙❘❙❙❘❙❚❙❘ ⌕.
@@ -308,7 +314,6 @@ ${'```%npmdesc```'}
      let muptime = clockString(_muptime) 
      let uptime = clockString(_uptime) 
      global.jam = time 
-     let vn = './tmp/haori.mp3'
      let totalreg = Object.keys(global.db.data.users).length 
      let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
      let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => { 
@@ -415,9 +420,9 @@ await conn.send2ButtonLoc(m.chat, await conn.resize(await (await fetch(flu + te
       } 
      })*/
      //conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m).catch(_ => conn.reply(m.chat, text.trim(), m))
-  conn.sendFile(m.chat, vn, 'haori.mp3', null, m, true, {
+  conn.sendFile(m.chat, 'https://a.uguu.se/jvdOuNWe.mp3', 'haori.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: { title: `💌 Luminous`, body: `${pickRandom(['Bot Wangsaff'])}`, sourceUrl: 'https://wa.me/62895627514070', thumbnail: await (await fetch('https://telegra.ph/file/c82fe82545f4b0daac4c1.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: { title: `💌 Luminous`, body: `${pickRandom(['Bot Wangsaff'])}`, sourceUrl: 'https://wa.me/62895627514070', thumbnail: await (await fetch('https://telegra.ph/file/2faa36c222a51b5acb9d7.jpg')).buffer(),}} 
      })
 } catch (e) { 
      conn.reply(m.chat, 'Maaf, menu sedang error', m) 
