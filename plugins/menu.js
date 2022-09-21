@@ -27,7 +27,7 @@ ${'```%npmdesc```'}
  `,
 }
  let handler = async (m, { conn, usedPrefix: _p, args, command }) => { 
-  
+   let bzz = './haori.mp3'
    let tags 
    let teks = `${args[0]}`.toLowerCase() 
    let array = ['all', 'absen', 'rpg', 'anime', 'downloader', 'game', 'fun', 'xp', 'github', 'group', 'image', 'quotes', 'admin', 'info', 'internet', 'islam', 'cristian', 'kerang', 'maker',  'sound', 'vn', 'furry', 'owner', 'suara', 'premium', 'quotes', 'info', 'stalk', 'shortlink', 'sticker', 'tools', 'text', 'nsfw', 'asupan', 'random', 'textpro', 'photooxy'] 
