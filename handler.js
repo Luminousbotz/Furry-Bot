@@ -28,7 +28,7 @@ module.exports = {
         global.fake = global.fake
         global.fkontak = global.fkontak
         global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
-        global.img = 'https://telegra.ph/file/1d18801d43ebd98f57d32.jpg'
+        global.img = 'https://telegra.ph/file/7551aa500fe0f3c8b7fa4.jpg'
         global.fla = pickRandom(global.flaaa)
         global.namabot = conn.user.name
         global.packname = 'ʟᴜᴍɪɴᴏᴜs-ᴍᴅ'
@@ -652,7 +652,7 @@ module.exports = {
                                 member: groupMetadata.participants.length
                             })
                             /*await this.send3TemplateButtonImg(id, action === 'add' ? wel : lea, text, wm, action === 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'FokusID')*/
-   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'Cute IQ-MD', fkontak,{
+   await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'Luminous-MD', fkontak,{
   contextInfo: {mentionedJid: [user],
     externalAdReply :{
     mediaUrl: linkyt,
