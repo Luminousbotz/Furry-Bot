@@ -275,7 +275,7 @@ ${'```%npmdesc```'}
     itemCount : 999,
     status: 1,
     surface : 1,
-    message: '[❗] Memuat Menu ' + teks + '...',
+    message: '[❗] Memuat Menu ' + teks + '...\n ᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ᴛᴜʀᴜ🗿',
     orderTitle: `▮Menu ▸`,
     thumbnail: await (await fetch('https://telegra.ph/file/07670d227a3c0d459ca40.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
@@ -325,21 +325,30 @@ ${'```%npmdesc```'}
          premium: plugin.premium, 
          enabled: !plugin.disabled, 
        } 
-     }) 
-     if (teks == '404') {
- 	let han = 'https://telegra.ph/file/7551aa500fe0f3c8b7fa4.jpg'
- 		let cute = `${pickRandom(['https://telegra.ph/file/7551aa500fe0f3c8b7fa4.jpg'])}` 
- 	let ori = `Hi Kak, @${m.sender.split`@`[0]}
- 
-Saya Adalah Luminous Bot Salah Satu Bot Whatsapp Yang Siap Membantu Kamu Mempermudah Sesuatu Seperti Membuat Sticker Dan Lainnya, Kalo Kamu Mau Request Fitur Silahkan Ketik #request Pesan Atau Fitur Yang Kamu Inginkan!`
-conn.sendMessage(m.chat, {
-    	react: {
-    		text: emot,
-    		key: m.key
-    	}
-    })	
-return conn.send2ButtonLoc(m.chat, cute, ori, `Note : If You Use Old Wa Or Mod And Button It Doesn't Look Di Rectly Type ${_p}simplemenu`, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', m)
-    
+     })
+      let tksk = `▣━–━–━–━–━–⊙–━–━–━–━┈▣
+│            *〔 ıll ɪɴғᴏ llı 〕* 
+└┬──────────────────┈ ⳹
+┌┤◦〉 *Nama :* *${name}*
+││◦〉 *Exp :* *${exp}*
+││◦〉 *Status :* ${premium ? 'Premium' : 'Free'} User
+││◦〉 *Limit :* *${limit}*
+││◦〉 *Level :* *${level}*
+││◦〉 *Rank :* *${role}*
+││◦〉 *Tag :* ${tag}
+└┬──────────────────┈ ⳹`
+
+let ftt = `📮 Catatan: Perlakukan Bot Secara Baik, Dev Akan Bertindak Tegas Apabila Pengguna Melanggar Rules.`
+     if (teks == '404') { 
+      return await conn.send2ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/ce56af0faea62eeeb651a.jpg')).buffer(), tksk, ftt, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', haori, { contextInfo: { mentionedJid: conn.parseMention(tksk), externalAdReply :{ 
+     mediaUrl: `${pickRandom([`https://wa.me/62895627514070`,`https://tiktok.com/@hnxyz5`])}`, 
+     mediaType: 'FOTO', 
+     description:  '',  
+     title: `${ucapan()} Kak ${name} UωU`,
+     body: `${pickRandom(['ᴊᴀɴɢᴀɴ ʟᴜᴘᴀ ɪsᴛɪʀᴀʜᴀᴛ', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`,
+     thumbnail: await (await fetch('https://telegra.ph/file/f64d6f546f3a28186a9ab.jpg')).buffer(),
+     sourceUrl: 'https://tiktok.com/@hnxyz5'}}})
+  
     }
   
      let groups = {} 
