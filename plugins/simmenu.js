@@ -8,7 +8,7 @@ let levelling = require('../lib/levelling')
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => { 
 	let hao = ` 
  *Official Bot By @${'0'.split('@')[0]}* 
- *Powered By @${'16199961931'.split('@')[0]}*` 
+ *Powered By @${'62895627514070'.split('@')[0]}*` 
   let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let { exp, limit, age, money, level, role, registered } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
@@ -97,9 +97,9 @@ const fkgif = {
                 },
 	 message: { 
 		"extendedTextMessage": {
-                 "text":`CUTE IQ MD 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
-                 "title": `CUTE IQ MD 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
-                 'jpegThumbnail': await (await fetch('https://telegra.ph/file/6f11ac2de8d57a1c831c4.jpg')).buffer()
+                 "text":`ʟᴜᴍɪɴᴏᴜs-ᴍᴅ ⚡ ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
+                 "title": `ʟᴜᴍɪɴᴏᴜs-ᴍᴅ ⚡ ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`,
+                 'jpegThumbnail': await (await fetch('https://telegra.ph/file/f5a56bd7e02ec26b54aa7.jpg')).buffer()
                         }
 	                  } 
                      }
@@ -111,7 +111,7 @@ const fkgif = {
 ⚘ *Bot Name: Luminous-MD*
 ⚘ *Creator: Rayhn*
 ⚘ *Contact Owner Bot*
-*https://wa.me/62895627514079*
+*https://wa.me/62895627514070*
 ⚘ *Tanggal: ${date}*  
 ⚘ *Jam: ${time} WIB*
 ⚘ *Status: 「 ${mode} 」*
@@ -156,18 +156,18 @@ let ftt = `*Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan sil
                               {
                                 "rows": [{
                                          "title": "📊 › Status ",
-                                         "description": "Status カ CUTE IQ-MD",
+                                         "description": "Status カ ʟᴜᴍɪɴᴏᴜs-ᴍᴅ",
                                          "rowId": ".botstat"
                                     }, {
                                          "title": "⚡› Speed ",
-                                         "description": "Menampilkan Kecepatan Respon カ CUTE IQ-MD",
+                                         "description": "Menampilkan Kecepatan Respon カ ʟᴜᴍɪɴᴏᴜs-ᴍᴅ",
                                          "rowId": ".ping"
                                     }, {
                                          "title": "🗒️› Info ",
-                                         "description": "Menampilkan Info カ CUTE IQ-MD",
+                                         "description": "Menampilkan Info カ ʟᴜᴍɪɴᴏᴜs-ᴍᴅ",
                                          "rowId": ".info"
                                     }, {
-                                         "title": "🎐 › Developer Bot ",
+                                         "title": "🎐 › Developer Bot",
                                          "description": "Kontak Creator Ku",
                                          "rowId": ".owner"
                                     }, {
