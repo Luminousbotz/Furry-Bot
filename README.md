@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://telegra.ph/file/b88ff90238fc02a160f3e.jpg" width="50%" height="50%" alt="Relldev"/>
+    <img src="https://telegra.ph/file/f5a56bd7e02ec26b54aa7.jpg" width="50%" height="50%" alt="Relldev"/>
     <br>
     <a href="https://github.com/Zivfurr"><img title="Created by" src="https://img.shields.io/badge/Creator-Ziv San-green?style=for-the-badge&logo=github"></a>
 </p>
