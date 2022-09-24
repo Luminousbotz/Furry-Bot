@@ -328,6 +328,7 @@ ${'```%npmdesc```'}
      }) 
      if (teks == '404') {
  	let han = 'https://telegra.ph/file/7551aa500fe0f3c8b7fa4.jpg'
+ 		let cute = `${pickRandom(['https://telegra.ph/file/7551aa500fe0f3c8b7fa4.jpg'])}` 
  	let ori = `Hi Kak, @${m.sender.split`@`[0]}
  
 Saya Adalah Luminous Bot Salah Satu Bot Whatsapp Yang Siap Membantu Kamu Mempermudah Sesuatu Seperti Membuat Sticker Dan Lainnya, Kalo Kamu Mau Request Fitur Silahkan Ketik #request Pesan Atau Fitur Yang Kamu Inginkan!`
@@ -337,7 +338,7 @@ conn.sendMessage(m.chat, {
     		key: m.key
     	}
     })	
-return conn.send2ButtonLoc(m.chat, han, ori, `Note : If You Use Old Wa Or Mod And Button It Doesn't Look Di Rectly Type ${_p}simplemenu`, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', m)
+return conn.send2ButtonLoc(m.chat, cute, ori, `Note : If You Use Old Wa Or Mod And Button It Doesn't Look Di Rectly Type ${_p}simplemenu`, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', m)
     
     }
   
