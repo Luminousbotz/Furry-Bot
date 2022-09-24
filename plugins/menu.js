@@ -335,7 +335,6 @@ ${'```%npmdesc```'}
 ││◦〉 *Limit :* *${limit}*
 ││◦〉 *Level :* *${level}*
 ││◦〉 *Rank :* *${role}*
-││◦〉 *Tag :* ${tag}
 └┬──────────────────┈ ⳹`
 
 let ftt = `📮 Catatan: Perlakukan Bot Secara Baik, Dev Akan Bertindak Tegas Apabila Pengguna Melanggar Rules.`
