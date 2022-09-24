@@ -299,6 +299,22 @@ ${'```%npmdesc```'}
     }
     }
     }
+ const haori = {
+    key : {
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net'
+    },
+    message: {
+    orderMessage: {
+    itemCount : 999999999999,
+    status: 404,
+    surface : 404,
+    message: `© luminous-MD\nSimple WhatsApp Bot`, 
+    orderTitle: `▮Menu ▸`,
+    thumbnail: await (await fetch('https://telegra.ph/file/2b669452f7517d2b5097a.jpg')).buffer(),
+    }
+    }
+    }
      let pe = '```' 
      let { premium, premiumTime } = global.db.data.users[m.sender] 
      let _uptime = process.uptime() * 1000 
