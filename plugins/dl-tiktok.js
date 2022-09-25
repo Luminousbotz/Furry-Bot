@@ -1,57 +1,50 @@
-let moment = require('moment-timezone')
-const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys-md')
-let fs = require('fs')
-let fetch = require('node-fetch')
-let handler = async (m, {text}) => {
-if (!text) return conn.reply(m.chat, 'Harap masukkan link\n\nContoh: .tiktok https://tiktok.com/xxxxxx', m)
-
-    let who
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-    else who = m.sender
-    let user = global.db.data.users[who]
-    let more = String.fromCharCode(8206)
-    let readMore = more.repeat(4001)
-let anu = `*── 「 TIKTOK 」 ──*
-
-SILAHKAN PILIH`
-     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-     templateMessage: {
-         hydratedTemplate: {
-           hydratedContentText: anu,
-           locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./src/welcome.jpg')}, 
-           hydratedFooterText: wm,
-           hydratedButtons: [{
-             urlButton: {
-               displayText: 'MY WEBSITE',
-               url: 'https://pilarv2.github.io/'
-               }
-               
-             },
-             {
-             quickReplyButton: {
-               displayText: 'Tanpa Watermark',
-               id: `.tiktoknowm ${text}`,
-             }
-           },
-           {
-             quickReplyButton: {
-               displayText: 'Dengan watermark',
-               id: `.tiktokwm ${text}`,
-             }
-           }]
-         }
-       }
-     }), { userJid: m.sender, quoted: m });
-    //conn.reply(m.chat, text.trim(), m)
-    return await conn.relayMessage(
-         m.chat,
-         template.message,
-         { messageId: template.key.id }
-     )
+/*const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+    if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
+    const { author: { nickname }, video, description } = await tiktokdl(args[0]).catch(async _ => await tiktokdlv2(args[0]))
+    const url = video.no_watermark || video.no_watermark_hd || video.with_watermark || video.no_watermark_raw
+    if (!url) throw 'Can\'t download video!'
+    conn.sendFile(m.chat, url, 'tiktok.mp4', `
+🔗 *Url:* ${url}
+🧏 *Nickname:* ${nickname}${description ? `🖹 *Description:* ${description}` : ''}
+`.trim(), m)
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tiktok)$/i
+handler.command = /^(tik(tok)?(dl)?)$/i
+module.exports = handler*/
 
+
+const hxz = require("hxz-api")
+let handler = async(m, { conn, args, usedPrefix, command }) => {
+if (!args[0]) throw `*Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
+if (!args[0].match(/tiktok/gi)) throw `*Link salah! Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
+let p = await  hxz.ttdownloader(args[0])
+const { nowm, wm, audio } = p
+// made by aine
+ conn.sendFile(m.chat, nowm, 'tiktok.mp4', `*${global.wm}*`, m)
+}
+handler.help = ['tiktok'].map(v => v + ' <url>')
+handler.tags = ['downloader']
+handler.command = /^(tiktok|tiktoknowm)$/i
+handler.limit = false
+handler.group = false
 module.exports = handler
+
+/*
+const { tiktokdl, tiktokdlv2 } = require('@bochilteam/scraper')
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+    if (!args[0]) throw `*Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
+    if (!args[0].match(/tiktok/gi)) throw `*Link salah! Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
+    const { author: { nickname }, video, description } = await tiktokdl(args[0]).catch(async _ => await tiktokdlv2(args[0]))
+    const url = video.no_watermark || video.no_watermark_hd || video.with_watermark || video.no_watermark_raw
+    if (!url) throw 'Can\'t download video!'
+    m.reply('Sedang diproses...')
+    conn.sendFile(m.chat, url, 'tiktok.mp4', `*© Aine*
+`.trim(), m)
+}
+handler.help = ['tiktok <url>']
+handler.tags = ['downloader']
+handler.command = /^(tik|tt|tiktok)$/i
+module.exports = handler
+*/
